@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Star Wars Api Traducción
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeMd="6" offsetMd="4">
+        <pre
+          style="max-height: 400px;border-width: 2px;border-color: white;">Data entrante de la Api es: {{ characterList | json }}</pre>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeMd="6" offsetMd="4">
+        <ion-list>
+          <ion-item *ngFor="let character of characterList">
+            <ion-label>{{character.nombre}}</ion-label>
+            <ion-label>{{character.altura}}</ion-label>
+            <ion-label>{{character.color_cabello}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
