@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Star Wars Api Traducción People
+      Star Wars Api Traducción Films
     </ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="home">
@@ -15,7 +15,7 @@
     <ion-row>
       <ion-col sizeMd="6" offsetMd="4">
         <pre
-          style="max-height: 400px;border-width: 2px;border-color: white;">Data entrante de la Api es: {{ characterList | json }}</pre>
+          style="max-height: 400px;border-width: 2px;border-color: white;">Data entrante de la Api es: {{ filmsList | json }}</pre>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -24,10 +24,10 @@
     <ion-row>
       <ion-col sizeMd="6" offsetMd="4">
         <ion-list>
-          <ion-item *ngFor="let character of characterList">
-            <ion-label>{{character.nombre}}</ion-label>
-            <ion-label>{{character.altura}}</ion-label>
-            <ion-label>{{character.color_cabello}}</ion-label>
+          <ion-item *ngFor="let film of filmsList">
+            <ion-label>{{film.titulo}}</ion-label>
+            <ion-label>{{film.id_episodio}}</ion-label>
+            <ion-label>{{film.rastreo_apertura}}</ion-label>
           </ion-item>
         </ion-list>
       </ion-col>

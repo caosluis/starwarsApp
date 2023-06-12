@@ -13,7 +13,7 @@ export class ListStarWarsPage implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get<any>(`https://uee1uk2o7k.execute-api.us-east-1.amazonaws.com/translationStarWars`).subscribe(res => {
+    this.http.get<any>(`https://uee1uk2o7k.execute-api.us-east-1.amazonaws.com/translationStarWars_people`).subscribe(res => {
       this.characterList = res
     })
   }

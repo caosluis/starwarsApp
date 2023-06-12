@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'update-register/:id',
     loadChildren: () => import('./update-register/update-register.module').then( m => m.UpdateRegisterPageModule)
   },
+  {
+    path: 'list-star-wars-films',
+    loadChildren: () => import('./list-star-wars-films/list-star-wars-films.module').then( m => m.ListStarWarsFilmsPageModule)
+  },
 ];
 
 @NgModule({
